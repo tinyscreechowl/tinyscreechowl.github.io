@@ -17,7 +17,7 @@ var i = 0;
 
 function nextSlide() {
      $('#pictures').html('<img width=54% src="' + x[i] + '">');
-     if (i < 3) {
+     if (i < x.length-1) {
           i = i +1
      } else {
           i = 0
