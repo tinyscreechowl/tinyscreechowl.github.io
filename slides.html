@@ -18,12 +18,10 @@ var i = 0;
 function nextSlide() {
      $('#pictures').html('<img width=54% src="' + x[i] + '">');
      i = i + 1;
+     setTimeout(nextSlide, 2000);
 }
 
 nextSlide();
-setTimeout(nextSlide, 2000);
-setTimeout(nextSlide, 4000);
-setTimeout(nextSlide, 6000);
 
 </script>
 </body>
