@@ -164,7 +164,9 @@ $('#message').text('How are you?');
 var i = 0;
 
 function nextSlide(e) {
-     if (e.pageX < $('body').width()/2) {
+     if (e.hasOwnProperty('pageX') && e.pageX < $('body').width()/2) {
+          i = i-2 }
+     if (e.hasOwnProperty('originalEvent') && e.originalEvent.pageX < $('body').width()/2) {
           i = i-2 }
      $('#pictures').html('<img width=100% src="' + x[i] + '">');
      console.log('We are showing image ' + i)
@@ -179,10 +181,7 @@ function nextSlide(e) {
 }
 
 $('body').click(nextSlide)
-$('body').bind('touchstart', touch)
-function touch(e) {
-     console.log(e) 
-}
+$('body').bind('touchstart', nextSlide)
 $.get('http://rsargent.cmucreatelab.org/m/endingToday.json', null, receivePicture)
 function receivePicture(a) {
      console.log(a) 
