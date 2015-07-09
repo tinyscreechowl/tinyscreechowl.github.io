@@ -157,20 +157,20 @@ x = ["http://funnypicture.org/wallpaper/2015/03/funny-and-cute-cat-pictures-21-b
 Hi
 <div id="message">This is my message!</div>
 <div id="pictures"></div>
-<div style="font-size:6px">v 0.2</div>
+<div style="font-size:6px">v 0.3</div>
 <script>
 $('#message').text('How are you?');
 
 var i = 0;
 
 function nextSlide(e) {
+     if (e.pageX < $('body').width()/2) {
+          i = i-2 }
      $('#pictures').html('<img width=100% src="' + x[i] + '">');
      console.log('We are showing image ' + i)
-     if (e.pageX < $('body').width()/2) {
-          i = i-2 
-     }
+
      if (i < x.length-1) {
-          i = i +1
+          i = i+1
      } else {
           i = 0
      }
