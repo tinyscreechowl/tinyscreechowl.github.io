@@ -166,15 +166,15 @@ var i = 0;
 function nextSlide(e) {
      $('#pictures').html('<img width=100% src="' + x[i] + '">');
      console.log('We are showing image ' + i)
+     if (e.pageX < $('body').width()/2) {
+          i = i-2 
+     }
      if (i < x.length-1) {
           i = i +1
      } else {
           i = 0
      }
      
-     if (e.pageX < $('body').width()/2) {
-          i = i-2 
-     }
      console.log('At end of nextSlide i is ' + i)
      
 }
