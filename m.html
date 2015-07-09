@@ -164,6 +164,7 @@ $('#message').text('How are you?');
 var i = 0;
 
 function nextSlide(e) {
+     console.log(e)
      if (e.hasOwnProperty('pageX') && e.pageX < $('body').width()/2) {
           i = i-2 }
      if (e.hasOwnProperty('originalEvent') && e.originalEvent.pageX < $('body').width()/2) {
@@ -181,7 +182,7 @@ function nextSlide(e) {
 }
 
 $('body').click(nextSlide)
-//$('body').bind('touchstart', nextSlide)
+$('body').bind('touchstart', nextSlide)
 $.get('http://rsargent.cmucreatelab.org/m/endingToday.json', null, receivePicture)
 function receivePicture(a) {
      console.log(a) 
