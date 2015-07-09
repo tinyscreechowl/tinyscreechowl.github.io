@@ -157,7 +157,7 @@ x = ["http://funnypicture.org/wallpaper/2015/03/funny-and-cute-cat-pictures-21-b
 Hi
 <div id="message">This is my message!</div>
 <div id="pictures"></div>
-<div style="font-size:6px">v 0.3</div>
+<div style="font-size:6px">v 0.4</div>
 <script>
 $('#message').text('How are you?');
 
@@ -176,10 +176,12 @@ function nextSlide(e) {
      }
      
      console.log('At end of nextSlide i is ' + i)
-     
 }
 
 $('body').click(nextSlide)
-
+$.get('http://rsargent.cmucreatelab.org/m/endingToday.html', null, receivePicture)
+function receivePicture(a) {
+     console.log(a) 
+}
 </script>
 </body>
