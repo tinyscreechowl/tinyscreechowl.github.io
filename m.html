@@ -179,6 +179,10 @@ function nextSlide(e) {
 }
 
 $('body').click(nextSlide)
+$('body').bind('touchend', touch)
+function touch(e) {
+     console.log(e) 
+}
 $.get('http://rsargent.cmucreatelab.org/m/endingToday.json', null, receivePicture)
 function receivePicture(a) {
      console.log(a) 
