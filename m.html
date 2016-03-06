@@ -157,7 +157,7 @@ x = ["http://funnypicture.org/wallpaper/2015/03/funny-and-cute-cat-pictures-21-b
 
 
 <div id="pictures"></div>
-<div style="font-size:6px">v 0.1</div>
+<div style="font-size:6px">v 0.11</div>
 <script>
 
 
@@ -179,7 +179,7 @@ function nextSlide(e) {
      }
      //if (e.hasOwnProperty('originalEvent') && e.originalEvent.pageX < $('body').width()/2) {
           //i = i-2 }
-     $('#pictures').html('<img width=100% src="' + x[i] + '">');
+     $('#pictures').html('<img style="width=100%" src="' + x[i] + '">');
      console.log('We are showing image ' + i)
      console.log('At end of nextSlide i is ' + i)
 }
@@ -190,7 +190,7 @@ $.get('http://mpf.sargentclan.com/endingToday.json', null, receivePicture)
 function receivePicture(a) {
      console.log(a) 
      x = a
-     $('#pictures').html('<img width=100% src="' + x[i] + '">');
+     $('#pictures').html('<img style="width=100%" src="' + x[i] + '">');
 }
 </script>
 </body>
