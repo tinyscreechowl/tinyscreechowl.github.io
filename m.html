@@ -173,6 +173,10 @@ function nextSlide(e) {
      } else {
           i = i +1
      }
+     
+     if(i < 0) {
+          i = 0
+     }
      //if (e.hasOwnProperty('originalEvent') && e.originalEvent.pageX < $('body').width()/2) {
           //i = i-2 }
      $('#pictures').html('<img width=100% src="' + x[i] + '">');
